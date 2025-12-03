@@ -7,6 +7,8 @@
     "start": "tsx dist/index.js",
     "dev": "tsx --watch src/index.ts",
     "build": "tsc",
+    "lint": "eslint .",
+    "format": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,10 +22,19 @@
     "morgan": "^1.10.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/morgan": "^1.9.10",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "jiti": "^2.6.1",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1"
   }
 }

@@ -5,8 +5,8 @@ import { HttpError } from '../utils/http-error'
 
 async function createNew(req: Request, res: Response, next: NextFunction) {
   try {
-    const { title, description } = req.body
-    const task = await taskService.createTask({ title, description })
+    const { title, description, status } = req.body
+    const task = await taskService.createTask({ title, description, status })
     res.status(201).json({ message: 'task created', data: { task } })
   } catch (err) {
     next(err)

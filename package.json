@@ -6,7 +6,8 @@
   "scripts": {
     "start": "NODE_ENV=production tsx dist/index.js",
     "dev": "NODE_ENV=development tsx --watch src/index.ts",
-    "build": "tsc",
+    "build": "prisma generate && tsc",
+    "postinstall": "prisma generate",
     "lint": "eslint .",
     "format": "prettier --write .",
     "studio": "npx prisma studio",
@@ -23,7 +24,8 @@
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "morgan": "^1.10.1",
-    "pg": "^8.16.3"
+    "pg": "^8.16.3",
+    "prisma": "^7.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -38,7 +40,6 @@
     "jiti": "^2.6.1",
     "prettier": "^3.7.4",
     "prettier-plugin-organize-imports": "^4.3.0",
-    "prisma": "^7.1.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.1"
